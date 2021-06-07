@@ -1237,8 +1237,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 275
-#define Y_BED_SIZE 275
+#define X_BED_SIZE 280
+#define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -20
@@ -1246,7 +1246,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 245
+#define Z_MAX_POS 250
 
 /**
  * Software Endstops
@@ -1422,7 +1422,8 @@
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL, PROBE_MANUALLY)
   // Set a height for the start of manual adjustment
-  #define MANUAL_PROBE_START_Z 0.2  // (mm) Comment out to use the last-measured height
+  /* #define MANUAL_PROBE_START_Z 0.2  // (mm) Comment out to use the last-measured height */
+  #define MANUAL_PROBE_START_Z 2.0  // (mm) Comment out to use the last-measured height
 #endif
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_BILINEAR, AUTO_BED_LEVELING_UBL)
