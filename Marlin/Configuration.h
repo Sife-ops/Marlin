@@ -1238,7 +1238,7 @@
 
 // The size of the printable area
 #define X_BED_SIZE 280
-#define Y_BED_SIZE 220
+#define Y_BED_SIZE 250
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -20
@@ -1593,11 +1593,13 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing.
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
+  /* #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing */
+  /* #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing */
+  #define Z_SAFE_HOMING_X_POINT -20  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 250  // Y point for Z homing
 #endif
 
 // Homing speeds (mm/min)
